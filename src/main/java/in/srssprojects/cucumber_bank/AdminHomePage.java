@@ -1,5 +1,7 @@
 package in.srssprojects.cucumber_bank;
 
+import java.awt.print.PageFormat;
+
 import org.openqa.selenium.WebDriver;
 //using Page factory
 import org.openqa.selenium.WebElement;
@@ -37,28 +39,33 @@ public class AdminHomePage {
 	}
 
 	// click home button
-	public void clickHome() {
+	public AdminHomePage clickHome() {
 		this.home.click();
+		return this;
 	}
 
 	// click logout button
-	public void clickLogout() {
+	public BankHomePage clickLogout() {
 		this.logout.click();
+		return new BankHomePage(driver);
 	}
 
 	// click branches
-	public void clickBranches() {
+	public BranchDetailsPage clickBranches() {
 		this.branches.click();
+		return PageFactory.initElements(driver, BranchDetailsPage.class);
 	}
 
 	// click roles
-	public void clickRoles() {
+	public RoleDetailsPage clickRoles() {
 		this.roles.click();
+		return PageFactory.initElements(driver, RoleDetailsPage.class);
 	}
 
 	// click employess
-	public void clickEmployees() {
+	public EmployeeDetailsPage clickEmployees() {
 		this.employees.clear();
+		return PageFactory.initElements(driver, EmployeeDetailsPage.class);
 	}
 
 }
