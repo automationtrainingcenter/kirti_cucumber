@@ -1,18 +1,17 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
         "line": 4,
-        "name": "verify login functionality with valid credentials",
+        "name": "",
         "description": "",
-        "id": "login-functionality;verify-login-functionality-with-valid-credentials",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 20804767400,
+              "duration": 222300,
               "status": "passed"
             },
             "line": 5,
@@ -24,60 +23,1145 @@
           },
           {
             "result": {
-              "duration": 155196700,
+              "duration": 4334757200,
               "status": "passed"
             },
             "line": 6,
-            "name": "user enters valid username",
+            "name": "user do login with valid credentials",
             "match": {
-              "location": "LoginSteps.user_enters_valid_username()"
+              "location": "RoleCreationSteps.user_do_login_with_valid_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1174117800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on branches button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_branches_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 973205400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on new branch button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_new_branch_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11146810900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.setUp()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "branch creation with multiple sets of data",
+        "description": "",
+        "id": "branch-creation-functionality;branch-creation-with-multiple-sets-of-data;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 172088700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 158043100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters branch name \"branchOneOne\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"branchOneOne\"",
+                  "offset": 24
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_branch_name(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 96277800,
+              "duration": 90545300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters address \"address\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"address\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_address(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84099400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enters zipcode \"56454\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"56454\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_zipcode(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1120287600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user selects country \"INDIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"INDIA\"",
+                  "offset": 21
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_country(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 257155400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user selects state \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 19
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_state(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 569659400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user selects city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 18
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_city(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 560948800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user clicks on submit button in branch creation form",
+            "match": {
+              "location": "BranchCreationSteps.user_clicks_on_submit_button_in_branch_creation_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19689600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user can see a message saying branch created successfully",
+            "match": {
+              "location": "BranchCreationSteps.user_can_see_a_message_saying_branch_created_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@branch"
+          },
+          {
+            "name": "@data_driven"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 141100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is in bank home page",
+            "match": {
+              "location": "LoginSteps.user_is_in_bank_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2484029700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user do login with valid credentials",
+            "match": {
+              "location": "RoleCreationSteps.user_do_login_with_valid_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1632418100,
               "status": "passed"
             },
             "line": 7,
-            "name": "user enters valid password",
+            "name": "click on branches button",
             "match": {
-              "location": "LoginSteps.user_enters_valid_password()"
+              "location": "BranchCreationSteps.click_on_branches_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 4101309200,
+              "duration": 1220385500,
               "status": "passed"
             },
             "line": 8,
-            "name": "user clicks on login button",
+            "name": "click on new branch button",
             "match": {
-              "location": "LoginSteps.user_clicks_on_login_button()"
+              "location": "BranchCreationSteps.click_on_new_branch_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7236317100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.setUp()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "branch creation with multiple sets of data",
+        "description": "",
+        "id": "branch-creation-functionality;branch-creation-with-multiple-sets-of-data;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 425143000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 211528200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters branch name \"branchOneTwo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"branchOneTwo\"",
+                  "offset": 24
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_branch_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 101097100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters address \"address\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"address\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_address(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 101837700,
+              "duration": 97411300,
               "status": "passed"
             },
-            "line": 9,
-            "name": "user can see admin home page with welcome to admin message",
+            "line": 14,
+            "name": "user enters zipcode \"56454\"",
             "match": {
-              "location": "LoginSteps.user_can_see_admin_home_page_with_welcome_to_admin_message()"
+              "arguments": [
+                {
+                  "val": "\"56454\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_zipcode(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1092002800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user selects country \"INDIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"INDIA\"",
+                  "offset": 21
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_country(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 796780600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user selects state \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 19
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_state(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 164583800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user selects city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 18
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_city(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 667132700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user clicks on submit button in branch creation form",
+            "match": {
+              "location": "BranchCreationSteps.user_clicks_on_submit_button_in_branch_creation_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25049000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user can see a message saying branch created successfully",
+            "match": {
+              "location": "BranchCreationSteps.user_can_see_a_message_saying_branch_created_successfully()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@branch"
+          },
+          {
+            "name": "@data_driven"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 102000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is in bank home page",
+            "match": {
+              "location": "LoginSteps.user_is_in_bank_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6704698700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user do login with valid credentials",
+            "match": {
+              "location": "RoleCreationSteps.user_do_login_with_valid_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1618938700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on branches button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_branches_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1806690000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on new branch button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_new_branch_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7801988400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.setUp()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "branch creation with multiple sets of data",
+        "description": "",
+        "id": "branch-creation-functionality;branch-creation-with-multiple-sets-of-data;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 267646100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 163348200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters branch name \"branchOneThree\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"branchOneThree\"",
+                  "offset": 24
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_branch_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 99637600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters address \"address\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"address\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_address(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93726500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enters zipcode \"56454\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"56454\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_zipcode(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1847822200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user selects country \"INDIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"INDIA\"",
+                  "offset": 21
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_country(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 145534700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user selects state \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 19
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_state(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2007581400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user selects city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 18
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_city(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1007984900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user clicks on submit button in branch creation form",
+            "match": {
+              "location": "BranchCreationSteps.user_clicks_on_submit_button_in_branch_creation_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14020500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user can see a message saying branch created successfully",
+            "match": {
+              "location": "BranchCreationSteps.user_can_see_a_message_saying_branch_created_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@branch"
+          },
+          {
+            "name": "@data_driven"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 58100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is in bank home page",
+            "match": {
+              "location": "LoginSteps.user_is_in_bank_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2883470700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user do login with valid credentials",
+            "match": {
+              "location": "RoleCreationSteps.user_do_login_with_valid_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 998847000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on branches button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_branches_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1094212500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on new branch button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_new_branch_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6708427400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.setUp()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "branch creation with multiple sets of data",
+        "description": "",
+        "id": "branch-creation-functionality;branch-creation-with-multiple-sets-of-data;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 113588400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 160442300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters branch name \"branchOneFour\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"branchOneFour\"",
+                  "offset": 24
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_branch_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 101620400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters address \"address\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"address\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_address(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 92792600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enters zipcode \"56454\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"56454\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_zipcode(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 514263400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user selects country \"INDIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"INDIA\"",
+                  "offset": 21
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_country(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 545849400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user selects state \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 19
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_state(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 153690600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user selects city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 18
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_city(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 540415500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user clicks on submit button in branch creation form",
+            "match": {
+              "location": "BranchCreationSteps.user_clicks_on_submit_button_in_branch_creation_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9025700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user can see a message saying branch created successfully",
+            "match": {
+              "location": "BranchCreationSteps.user_can_see_a_message_saying_branch_created_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@branch"
+          },
+          {
+            "name": "@data_driven"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 43700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is in bank home page",
+            "match": {
+              "location": "LoginSteps.user_is_in_bank_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2820582500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user do login with valid credentials",
+            "match": {
+              "location": "RoleCreationSteps.user_do_login_with_valid_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 908931800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on branches button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_branches_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1664135400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on new branch button",
+            "match": {
+              "location": "BranchCreationSteps.click_on_new_branch_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7073210300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.setUp()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "branch creation with multiple sets of data",
+        "description": "",
+        "id": "branch-creation-functionality;branch-creation-with-multiple-sets-of-data;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 2138606800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 182223900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enters branch name \"branchOneFive\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"branchOneFive\"",
+                  "offset": 24
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_branch_name(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 114675500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters address \"address\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"address\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_address(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87506500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enters zipcode \"56454\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"56454\"",
+                  "offset": 20
+                }
+              ],
+              "location": "BranchCreationSteps.user_enters_zipcode(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 919232900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user selects country \"INDIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"INDIA\"",
+                  "offset": 21
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_country(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 643728500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user selects state \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 19
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_state(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 138932000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user selects city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 18
+                }
+              ],
+              "location": "BranchCreationSteps.user_selects_city(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1042547200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user clicks on submit button in branch creation form",
+            "match": {
+              "location": "BranchCreationSteps.user_clicks_on_submit_button_in_branch_creation_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9499200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user can see a message saying branch created successfully",
+            "match": {
+              "location": "BranchCreationSteps.user_can_see_a_message_saying_branch_created_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@branch"
+          },
+          {
+            "name": "@data_driven"
           }
         ]
       }
     ],
-    "name": "login functionality",
-    "description": "  description: verify login functionality with valid, invlaid and blank data",
-    "id": "login-functionality",
+    "name": "branch creation functionality",
+    "description": "",
+    "id": "branch-creation-functionality",
     "keyword": "Feature",
-    "uri": "src/test/java/features/login.feature",
-    "tags": []
+    "uri": "src/test/java/features/branch.feature",
+    "tags": [
+      {
+        "name": "@branch",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
